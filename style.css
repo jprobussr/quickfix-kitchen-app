@@ -119,3 +119,20 @@ body {
 .add-to-cart button:hover {
   background-color: #ff914dda;
 }
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  border-bottom: 1px solid coral;
+  padding: 1rem 0;
+}
+
+.order-item button {
+  background-color: rgba(220, 20, 60, 0.211);
+  color: white;
+  border: none;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+}

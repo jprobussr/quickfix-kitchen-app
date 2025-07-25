@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="add-to-cart">
-          <button type="button" aria-label="Add Hamburger to cart">+</button>
+          <button data-add="hamburger" type="button" aria-label="Add Hamburger to cart">+</button>
         </div>
       </section>
       <section class="menu-category">
@@ -51,7 +51,9 @@
           </div>
         </div>
         <div class="add-to-cart">
-          <button type="button" aria-label="Add Pizza to cart">+</button>
+          <button data-add="pizza" type="button" aria-label="Add Pizza to cart">
+            +
+          </button>
         </div>
       </section>
       <section class="menu-category">
@@ -60,12 +62,18 @@
           <div class="text">
             <h2>Beverage</h2>
             <p class="description">Iced Cold Beverage</p>
-            <span class="price">$12</span>
+            <span class="price">$3</span>
           </div>
         </div>
         <div class="add-to-cart">
-          <button type="button" aria-label="Add Beverage to cart">+</button>
+          <button data-add="beer" type="button" aria-label="Add Beverage to cart">+</button>
         </div>
+      </section>
+
+      <section id="order-summary">
+        <h2>Your Order</h2>
+        <div id="order-items"></div>
+        <p id="order-total"></p>
       </section>
       <!-- <section class="menu-category">
         <i class="fa-solid fa-drumstick-bite"></i>
