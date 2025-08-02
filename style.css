@@ -129,10 +129,10 @@ body {
 }
 
 .order-item button {
-  background-color: rgba(220, 20, 60, 0.211);
+  background-color: rgba(52, 50, 51, 0.76);
   color: white;
   border: none;
-  padding: 0.2rem 0.6rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 5px;
   cursor: pointer;
 }
