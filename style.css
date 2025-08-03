@@ -113,11 +113,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .add-to-cart button:hover {
   background-color: #ff914dda;
+}
+
+.add-to-cart button:active {
+  transform: scale(0.95);
 }
 
 .order-item {

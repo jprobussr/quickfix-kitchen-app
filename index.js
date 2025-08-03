@@ -24,35 +24,20 @@ let order = [];
 document.addEventListener('click', (e) => {
   if (e.target.dataset.add) {
     const itemId = e.target.dataset.add;
-    const item = menuData.find((item) => item.id === itemId);
+    const item = menuData.find(item => item.id === itemId);
     order.push(item);
-    renderOrder();
-    console.log(order);
+    renderItems();
   }
 });
 
-const renderOrder = () => {
-    const orderItems = document.getElementById('order-items');
-    const orderTotal = document.getElementById('order-total');
+const renderItems = () => {
+  const orderItems = document.getElementById('order-items');
+  orderItems.innerHTML = '';
 
-    orderItems.innerHTML = '';
-
-    let total = 0;
-
-    order.forEach((item, index) => {
-        const itemEl = document.createElement('div');
-        itemEl.classList.add('order-item');
-
-        itemEl.innerHTML = `
-            ${item.name} => $${item.price}
-            <button data-remove='${index}'>remove</button>
-        `;
-
-        orderItems.appendChild(itemEl);
-
-        total += item.price;
-    });
-
-    orderTotal.textContent = `Total: $${total}`;
-
+  order.forEach(item => {
+    const itemEL = document.createElement('div');
+    itemEL.textContent = `${item.name} - $${item.price}`
+    orderItems.appendChild(itemEL);
+  })
 }
+
