@@ -24,20 +24,28 @@ let order = [];
 document.addEventListener('click', (e) => {
   if (e.target.dataset.add) {
     const itemId = e.target.dataset.add;
-    const item = menuData.find(item => item.id === itemId);
+    const item = menuData.find((item) => item.id === itemId);
     order.push(item);
-    renderItems();
+    renderOrder();
   }
 });
 
-const renderItems = () => {
+const renderOrder = () => {
   const orderItems = document.getElementById('order-items');
   orderItems.innerHTML = '';
 
-  order.forEach(item => {
+  order.forEach((item) => {
     const itemEL = document.createElement('div');
-    itemEL.textContent = `${item.name} - $${item.price}`
+    itemEL.textContent = `${item.name} = $${item.price}`;
     orderItems.appendChild(itemEL);
-  })
-}
+  });
 
+  const orderTotal = document.getElementById('order-total');
+  let total = 0;
+
+  order.forEach((item) => {
+    total += item.price;
+  });
+
+  orderTotal.textContent = `Total: ${total}`;
+};

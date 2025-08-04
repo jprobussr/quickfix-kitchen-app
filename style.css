@@ -140,3 +140,8 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+
+#order-items {
+  font-size: 1.4rem;
+ 
+}
