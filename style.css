@@ -136,12 +136,11 @@ body {
   background-color: rgba(52, 50, 51, 0.76);
   color: white;
   border: none;
-  padding: 0.3rem 0.6rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 5px;
   cursor: pointer;
 }
 
 #order-items {
   font-size: 1.4rem;
- 
 }
