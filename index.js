@@ -25,13 +25,14 @@ document.addEventListener('click', (e) => {
   if (e.target.dataset.add) {
     const itemId = e.target.dataset.add;
     const item = menuData.find((item) => item.id === itemId);
-    order.push(item);
 
+    order.push(item);
     renderOrder();
   }
 
   if (e.target.dataset.remove) {
     const indexToRemove = parseInt(e.target.dataset.remove);
+
     order.splice(indexToRemove, 1);
 
     renderOrder();

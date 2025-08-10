@@ -144,3 +144,8 @@ body {
 #order-items {
   font-size: 1.4rem;
 }
+
+#order-total {
+  font-size: 1.5rem;
+  color: coral;
+}
